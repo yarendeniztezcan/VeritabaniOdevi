@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitap Kafe</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+    >
+
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400&display=swap"
+            rel="stylesheet"
+    >
+
+    <!-- Favicon -->
+    <link
+            rel="icon"
+            href="https://sdmntprwestus2.oaiusercontent.com/files/00000000-87bc-61f8-9ff9-b00a0f16ce96/raw?s...FhCA9e9Dyx4kzgdCWXUBV2CsjKjSkuwE/Dc9SSUXbY%3D"
+            type="image/png"
+    >
+
+    <style>
+        :root {
+            --cafe-brown:   #5d4037;
+            --warm-beige:   #f5f1e6;
+            --accent-green: #4a6b57;
+            --bs-gray-dark: #343a40;
+        }
+
+        body {
+            background: url('https://images.unsplash.com/photo-1...auto=format&fit=crop&w=1350&q=80')
+            no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Raleway', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(61, 4, 35, 0.85);
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 2;
+            margin: auto;
+            padding: 3rem;
+            max-width: 800px;
+            text-align: center;
+            color: white;
+            background: rgba(94, 76, 61, 0.4);
+            /* WebKit fallback */
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--warm-beige);
+        }
+
+        .logo {
+            width: 240px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            border-radius: 50%;
+            object-fit: fill;
+            border: 4px solid #f8f4e9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .tagline {
+            font-style: italic;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 2px;
+            border: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 300px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+        }
+
+        .btn-success {
+            background: #8d6e63;
+        }
+
+        .btn-warning {
+            background: var(--cafe-brown);
+        }
+
+        .btn-danger {
+            background: var(--bs-gray-dark);
+        }
+        .btn-back{
+            background: #358184;
+        }
+        .btn-blue{
+            background: #007bff;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+<div class="overlay"></div>
+<div class="container">
+    <img src="logo.png" alt="Book Cafe Logo" class="logo">
+    <h1>Kitap Kafe</h1>
+    <p class="tagline">
+        Kitapların, kahvenin ve huzurun buluştuğu mekan
+    </p>
+
+    <div class="d-grid gap-2 mt-4">
+        <!--<a href="kitaplar.php"        class="btn btn-primary">Kitap Satın Al</a>-->
+        <a href="menu.php"           class="btn btn-success">Kafe Siparişi Ver</a>
+        <a href="rezervasyon.php"    class="btn btn-warning">Masa Rezervasyonu Yap</a>
+        <a href="musteri_ekle.php"   class="btn btn-danger">Müşteri Ekle</a>
+        <a href="masalar.php"        class="btn btn-back">Masalar</a>
+        <a href="ayarlar.php"        class="btn btn-blue">Ayarlar Ve Yonetim Paneli</a>
+    </div>
+
+    <div class="footer">
+        © 2025 Kitap Kafe • Kitaplarla dolu bir mola
+    </div>
+</div>
+</body>
+</html>
